@@ -1,4 +1,4 @@
-Setup .env file
+#Setup .env file
 MONGODB_URI=...
 PORT=5001
 JWT_SECRET=...
@@ -8,7 +8,7 @@ CLOUDINARY_API_KEY=...
 CLOUDINARY_API_SECRET=...
 
 NODE_ENV=development
-Build the app
+#Build the app
 npm run build
-Start the app
+#Start the app
 npm start
