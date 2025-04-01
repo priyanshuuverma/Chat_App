@@ -8,7 +8,7 @@ import cors from "cors";
 import path from "path";
 import { app, server } from "./src/lib/socket.js";
 dotenv.config();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5001;
 const __dirname = path.resolve();
 app.use(express.json());
 app.use(cookieParser());
