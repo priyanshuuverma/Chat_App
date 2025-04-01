@@ -22,7 +22,7 @@ export const useAuthStore = create((set, get) => ({
       get().connectSocket();
     } catch (error) {
       console.error("Error in checkAuth:", error);
-      toast.error("Failed to check authentication.");
+     
       set({ authUser: null });
     } finally {
       set({ isCheckingAuth: false });
