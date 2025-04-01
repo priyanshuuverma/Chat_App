@@ -8,7 +8,7 @@ import cors from "cors";
 import path from "path";
 import { app, server } from "./src/lib/socket.js";
 dotenv.config();
-const PORT =5001;
+const PORT = process.env.PORT;
 const __dirname = path.resolve();
 app.use(express.json());
 app.use(cookieParser());
@@ -28,10 +28,7 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
   });
 }
-app.get("/", (req, res) => {
-  res.send("hey");
-  console.log("server is on");
+server.listen(PORT, () => {
+  console.log("server is running on PORT:" + PORT);
   connectDB();
 });
-
-server.listen(PORT);
